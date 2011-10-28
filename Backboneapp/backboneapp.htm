@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>AwesomeSite</title>
+     <link href="Styles/Css-reset.css" rel="stylesheet" type="text/css" />
+    <link href="Styles/Backboneapp.css" rel="stylesheet" type="text/css" />
+
+    <script src="Scripts/jquery-1.6.2.min.js" type="text/javascript"></script>
+    <script src="Scripts/Jquery.tmpl.min.js" type="text/javascript"></script>
+
+    <script src="Scripts/underscore.js" type="text/javascript"></script>
+    <script src="Scripts/backbone.js" type="text/javascript"></script>
+    <script src="Scripts/Backboneapp.js" type="text/javascript"></script>
+
+    <script type="text/template" id="item-tmpl">
+        <div class="menu-item" id="item${attributes.position}">
+            {{if attributes.title != ""}}
+                <a href="#info/${attributes.position}" class="title">${ attributes.title }</a>
+            {{/if}}
+        </div>
+    </script>
+    <script type="text/template" id="content-tmpl">
+        <div class="content" id="item${attributes.position}">
+            {{html attributes.content}}
+        </div>
+    </script>
+</head>
+<body>
+<div id="content">
+    <div id="backbone-menu"></div>
+    <div id="backbone-content"></div>
+</div>
+</body>
+</html>

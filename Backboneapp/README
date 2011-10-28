@@ -1,0 +1,16 @@
+﻿Very simple example application, that uses following components:
+
+jQuery (jquery-1.6.2.min.js)
+- http://jquery.com/
+
+jquery.tmpl (jquery.tmpl.min.js)
+- http://github.com/jquery/jquery-tmpl
+
+underscore.js & backbone.js
+- http://github.com/documentcloud/backbone
+- http://github.com/documentcloud/underscore
+
+css-reset.css
+- http://yuilibrary.com/yui/docs/cssreset/
+
+you can contatct me at any time at lostsoul@beyondtheclouds.net
