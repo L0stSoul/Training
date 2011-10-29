@@ -1,9 +1,4 @@
-﻿/// <reference path="Shared/underscore.js" />
-/// <reference path="Shared/backbone.js" />
-/// <reference path="Shared/jquery-1.6.2.min.js" />
-/// <reference path="Shared/Jquery.tmpl.min.js" />
-
-$(document).ready(function ()
+﻿$(document).ready(function ()
 {
     var Item = Backbone.Model.extend({
     });

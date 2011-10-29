@@ -1,0 +1,19 @@
+learned how to create simple jquery plugins
+
+notes for myself:
+
+-Always wrap your plugin in (function( $ ){ // plugin goes here })( jQuery );
+
+-Don't redundantly wrap the this keyword in the immediate scope of your plugin's function
+
+-Unless you're returning an intrinsic value from your plugin,
+ always have your plugin's function return the this keyword to maintain chainability.
+
+-Rather than requiring a lengthy amount of arguments,
+ pass your plugin settings in an object literal that can be extended over the plugin's defaults.
+
+-Don't clutter the jQuery.fn object with more than one namespace per plugin.
+
+-Always namespace your methods, events and data.
+
+-jQuery.fn is pronounced jQuery effin'

@@ -1,0 +1,42 @@
+﻿#content
+{
+    width: 600px;
+    margin: 50px auto;
+    font-family: arial,helvetica,sans-serif;
+    color: #858585;
+}
+
+/* Text box */
+h2{ margin-bottom: 5px; }
+.wrapper{ padding-right: 6px; margin-bottom: 10px; }
+#textbox{display: block; max-width: 100%; }
+
+/* Preview */
+.preview
+{
+    float: left;
+    text-align: justify;
+    padding: 5px 10px;
+    overflow: hidden;
+}
+.text{ height: 300px; }
+
+.updating_control
+{
+    border: 1px #858585 solid;
+    color: #858585;
+    width: 100%;
+}
+
+#preview1
+{   
+   color: #468966;
+   width: 279px;
+   border-right: 1px black solid;
+}
+#preview2
+{
+   width: 280px;
+   color: #8E2800;
+   font-family: serif;
+}

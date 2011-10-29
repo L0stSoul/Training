@@ -1,0 +1,37 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script src="Scripts/jquery-1.6.2.min.js" type="text/javascript"></script>
+    <script src="Scripts/Jquery.move.test-plugin.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        $(document).ready(function ()
+        {
+            function rand(max) { return Math.floor(Math.random() * max); }
+
+            $(".moveable").click(function ()
+            {
+                $(this).move(rand(500), rand(500))
+            });
+
+        });
+    </script>
+    <style type="text/css">
+        .moveable
+        {
+            font-family: arial,helvetica,sans-serif;
+            color: White;
+            background-color: #5C832F;
+            padding: 45px 10px 10px 30px;
+            height: 65px;
+            width: 80px;            
+        }
+    </style>
+</head>
+<body>
+<div class="moveable">
+    click.me
+</div>
+</body>
+</html>
