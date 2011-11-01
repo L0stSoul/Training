@@ -1,0 +1,15 @@
+Not so bad Observer pattern implementation on javascript. sample included :)
+
+notes for myself:
+
+#Event.Js
+Observer implementation. work fine stand-alone.
+
+#jQuery (jquery-1.6.2.min.js)
+- http://jquery.com/ 
+
+#css-reset.css
+- http://yuilibrary.com/yui/docs/cssreset/
+
+#sample.js
+- sample script which uses Observers
