@@ -55,7 +55,7 @@ $(document).ready(function ()
     console.log("");
 });
 
-/*inherit_B sample*/
+/*inherit_C sample*/
 $(document).ready(function ()
 {
 
