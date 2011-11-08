@@ -6,6 +6,11 @@ $(document).ready(function ()
 
     function Gentleman(name) { Men.call(this, name); }
     inherit_A(Gentleman, Men);
+
+    var gentleman = new Gentleman();
+
+    console.log(gentleman instanceof (Gentleman));
+    console.log(gentleman instanceof (Men));
 });
 
 
@@ -52,6 +57,15 @@ $(document).ready(function ()
     men.say();
     gentleman.say();
     programmer.say();
+
+    console.log(men instanceof (Programmer));
+    console.log(men instanceof (Gentleman));
+    console.log(men instanceof (Men));
+
+    console.log(programmer instanceof (Programmer));
+    console.log(programmer instanceof (Gentleman));
+    console.log(programmer instanceof (Men));
+
     console.log("");
 });
 
@@ -81,7 +95,8 @@ $(document).ready(function ()
     {
         __class_name: "Gentleman",
         cosntructor: Gentleman,
-
+        
+        FUCKING_TEST_METHOD: function(){ alert("nyaaa!") },
         THOUGHTS: "it's teatime!"
     }
     inherit_C(Gentleman, Men)
@@ -107,7 +122,7 @@ $(document).ready(function ()
     BadProgrammer.prototype =
     {
         __class_name: "BadProgrammer",
-        cosntructor: Programmer,
+        cosntructor: BadProgrammer,
 
         THOUGHTS: "runtime error 138? wanna debug XD!",
         say: function () { this.THOUGHTS = this.Men.THOUGHTS; this.Men.say.apply(this); }
@@ -123,6 +138,12 @@ $(document).ready(function ()
     gentleman.say();
     programmer.say();
     badprogrammer.say();
+    badprogrammer.FUCKING_TEST_METHOD();
+    
+    console.log(programmer instanceof (Programmer));
+    console.log(programmer instanceof (Gentleman));
+    console.log(programmer instanceof (Men));
+
     console.log("");
 });
 
@@ -164,4 +185,9 @@ $(document).ready(function ()
 
     var lad = new Lad();
     lad.say_something_wise();
+
+    console.log(lad instanceof (Mammy));
+    console.log(lad instanceof (Daddy));
+    console.log(lad instanceof (Lad));
+
 });

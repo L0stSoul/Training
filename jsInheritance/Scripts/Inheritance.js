@@ -7,14 +7,6 @@
     Child.prototype.constructor = Child;
     Child.super = Parent.prototype;
 }
-/*
-function inherit_B( Child, Parent )
-{
-    for (var prop in Parent.prototype)
-       if( !Child.prototype[prop] ) Child.prototype[prop] = Parent.prototype[prop];
-    Child.prototype.super = Parent.prototype;
-}
-*/
 function inherit_B(Child, Parent)
 {
     var F = function () { };
