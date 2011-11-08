@@ -15,27 +15,39 @@ var Mixin_BeverageLover =
 function Men(name)
 {
     this.name = name;
-    this.THOUGHTS = "I like soccer";
+}
+Men.prototype =
+{
+    constructor: Men,
+     
+    THOUGHTS: "I like soccer"
 }
 extend(Men, Mixin_Babbler);
 
 function Gentleman(name)
 {
     this.name = name;
-    this.THOUGHTS = "I like Earl Grey"
-    this.FAVORITE_BEVERAGE = "Tea"
+}
+Gentleman.prototype =
+{
+    constructor: Gentleman,
+
+    THOUGHTS: "I like Earl Grey",
+    FAVORITE_BEVERAGE: "Tea"
 }
 extend(Gentleman, Mixin_Babbler, Mixin_BeverageLover);
 
 function Programmer(name)
 {
     this.name = name;
-    this.THOUGHTS = "MVC, MVVM, MVP *___* like it!";
-    this.FAVORITE_BEVERAGE = "Cofee";
 }
 Programmer.prototype =
 {
     constructor: Programmer,
+
+    THOUGHTS: "MVC, MVVM, MVP *___* like it!",
+    FAVORITE_BEVERAGE: "Cofee",
+
     write_good_code: function () { console.log("*writing best code ever*"); this.drink(); }
 }
 extend(Programmer, Mixin_Babbler, Mixin_BeverageLover);
