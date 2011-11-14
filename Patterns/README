@@ -3,5 +3,5 @@
 -Decorator
 -Factory
 -Mediator
--Memento
+-Memoization
 -Singleton
