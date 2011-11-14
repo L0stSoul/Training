@@ -13,15 +13,15 @@
     }
     calculation.memento = {};
 
-    var start = new Date();
+    console.profile();
     console.log('result:' + calculation(2, 100000000));
-    console.log('time passed:' + (new Date().getTime() - start.getTime()) + ' ms');
+    console.profileEnd();
 
-    var start = new Date();
+    console.profile();
     console.log('result:' + calculation(2, 100000000));
-    console.log('time passed:' + (new Date().getTime() - start.getTime()) + ' ms');
+    console.profileEnd();
 
-    var start = new Date();
+    console.profile();
     console.log('result:' + calculation(2, 10000000));
-    console.log('time passed:' + (new Date().getTime() - start.getTime()) + ' ms');
+    console.profileEnd();
 }
