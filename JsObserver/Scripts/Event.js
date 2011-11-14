@@ -15,7 +15,7 @@ Event.prototype =
     },
     subscribe: function (observer, context)
     {
-        var ctx = context || this;
+        var ctx = context || null;
         this._observers.push({ observer: observer, context: ctx });
     },
     unsubscribe: function (observer, context )

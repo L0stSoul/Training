@@ -1,7 +1,6 @@
-﻿
-var Mixin_Babbler =  
+﻿var Mixin_Babbler =  
 {
-    say: function () { console.log("My name is " + this.name + " and i think:'" + this.THOUGHTS + "'"); },
+    say: function ( a ) { console.log("My name is " + this.name + " and i think:'" + this.THOUGHTS + "'"); },
     argue: function() { console.log("You're totally wrong"); }
 };
 
@@ -41,6 +40,7 @@ function Programmer(name)
 {
     this.name = name;
 }
+
 Programmer.prototype =
 {
     constructor: Programmer,

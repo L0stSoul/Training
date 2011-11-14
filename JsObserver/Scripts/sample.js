@@ -1,6 +1,19 @@
 ﻿/// <reference path="Event.js" />
 /// <reference path="jquery-1.6.2.min.js" />
 
+//Very simple sample
+var someEvent = new Event();
+someEvent.subscribe(function ( data ) { console.log("wohoooooo " + data ) });
+
+var someObject =
+{
+    _topSecretInfo: 42,
+    observerFunction: function () { console.log("Top Secret:" + this._topSecretInfo) }
+}
+someEvent.subscribe(someObject.observerFunction, someObject); 
+someEvent.raise("yeaah!");
+someEvent.raise();
+
 
 //Simple Sample
 $(document).ready(function ()
@@ -18,7 +31,9 @@ $(document).ready(function ()
     }
     Preview.prototype =
     {
-        _on_button_click: function ()
+        constructor: Preview,
+
+        _onButtonClick: function ()
         {
             if (this._isSubscribed)
             {
@@ -30,9 +45,10 @@ $(document).ready(function ()
             this.subscribe();
             this._button.text("Unsubscribe!");
         },
+
         init: function ()
         {
-            this._button.click($.proxy(this._on_button_click, this));
+            this._button.click($.proxy(this._onButtonClick, this));
             this.subscribe();
         },
         update: function (data)

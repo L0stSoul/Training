@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Singleton</title>
+    <script src="Scripts/Singleton.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        //Singleton A test;
+        singleton_A.log("1..2..3... mic test");
+
+        //Singleton_B test;
+        function NonSingleton() { }
+        NonSingleton.prototype =
+        {
+            consturctor: NonSingleton,
+            scream: function(){console.log("Woooohoooooo!")}
+        }
+
+        var singleton = new Singleton_B();
+        var nonsingleton = new NonSingleton();
+        
+        singleton.log("3..2..1... ignition!");
+        nonsingleton.scream();
+    </script>
+</head>
+<body>
+
+</body>
+</html>
