@@ -1,7 +1,7 @@
 ﻿{
     function calculation(x, y)
     {
-        var key = x.toString() + y.toString();
+        var key = x.toString() + "|" + y.toString();
         var result = 0;
 
         if (!calculation.memento[key])
