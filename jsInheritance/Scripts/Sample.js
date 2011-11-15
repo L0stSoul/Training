@@ -1,16 +1,16 @@
 ﻿/*inherit_A sample*/
 $(document).ready(function ()
 {
-    function Men(name) { this.name = name }
-    Men.prototype.say = function () { console.log("My name is " + this.name) }
+    function Man(name) { this.name = name }
+    Man.prototype.say = function () { console.log("My name is " + this.name) }
 
-    function Gentleman(name) { Men.call(this, name); }
-    inherit_A(Gentleman, Men);
+    function Gentleman(name) { Man.call(this, name); }
+    inherit_A(Gentleman, Man);
 
     var gentleman = new Gentleman();
 
     console.log(gentleman instanceof (Gentleman));
-    console.log(gentleman instanceof (Men));
+    console.log(gentleman instanceof (Man));
 });
 
 
@@ -19,10 +19,10 @@ $(document).ready(function ()
 $(document).ready(function ()
 {
 
-    function Men(name) { this.name = name }
-    Men.prototype =
+    function Man(name) { this.name = name }
+    Man.prototype =
     {
-        cosntructor: Men,
+        cosntructor: Man,
         THOUGHTS: "wanna beer!",
         say: function ()
         {
@@ -32,11 +32,11 @@ $(document).ready(function ()
 
     function Gentleman(name, prefered_beverage)
     {
-        Men.call(this, name);
+        Man.call(this, name);
         this.prefered_beverage = prefered_beverage;
     }
     Gentleman.prototype = { cosntructor: Gentleman, THOUGHTS: "it's teatime!" }
-    inherit_B(Gentleman, Men)
+    inherit_B(Gentleman, Man)
 
     function Programmer(name, prefered_lang)
     {
@@ -50,21 +50,21 @@ $(document).ready(function ()
     }
     inherit_B(Programmer, Gentleman)
 
-    var men = new Men("Jack");
+    var man = new Man("Jack");
     var gentleman = new Gentleman("John", "Orange pekoe");
     var programmer = new Programmer("James", "C++");
 
-    men.say();
+    man.say();
     gentleman.say();
     programmer.say();
 
-    console.log(men instanceof (Programmer));
-    console.log(men instanceof (Gentleman));
-    console.log(men instanceof (Men));
+    console.log(man instanceof (Programmer));
+    console.log(man instanceof (Gentleman));
+    console.log(man instanceof (Man));
 
     console.log(programmer instanceof (Programmer));
     console.log(programmer instanceof (Gentleman));
-    console.log(programmer instanceof (Men));
+    console.log(programmer instanceof (Man));
 
     console.log("");
 });
@@ -73,11 +73,11 @@ $(document).ready(function ()
 $(document).ready(function ()
 {
 
-    function Men(name) { this.name = name }
-    Men.prototype =
+    function Man(name) { this.name = name }
+    Man.prototype =
     {
-        __class_name: "Men",
-        cosntructor: Men,
+        __class_name: "Man",
+        cosntructor: Man,
 
         THOUGHTS: "wanna beer!",
         say: function ()
@@ -88,7 +88,7 @@ $(document).ready(function ()
 
     function Gentleman(name, prefered_beverage)
     {
-        Men.call(this, name);
+        Man.call(this, name);
         this.prefered_beverage = prefered_beverage;
     }
     Gentleman.prototype =
@@ -96,10 +96,9 @@ $(document).ready(function ()
         __class_name: "Gentleman",
         cosntructor: Gentleman,
         
-        FUCKING_TEST_METHOD: function(){ alert("nyaaa!") },
         THOUGHTS: "it's teatime!"
     }
-    inherit_C(Gentleman, Men)
+    inherit_C(Gentleman, Man)
 
     function Programmer(name, prefered_lang)
     {
@@ -125,24 +124,23 @@ $(document).ready(function ()
         cosntructor: BadProgrammer,
 
         THOUGHTS: "runtime error 138? wanna debug XD!",
-        say: function () { this.THOUGHTS = this.Men.THOUGHTS; this.Men.say.apply(this); }
+        say: function () { this.THOUGHTS = this.Man.THOUGHTS; this.Man.say.apply(this); }
     }
     inherit_C(BadProgrammer, Programmer)
 
-    var men = new Men("Jack");
+    var man = new Man("Jack");
     var gentleman = new Gentleman("John", "Orange pekoe");
     var programmer = new Programmer("James", "C++");
     var badprogrammer = new BadProgrammer("Jake");
 
-    men.say();
+    man.say();
     gentleman.say();
     programmer.say();
     badprogrammer.say();
-    badprogrammer.FUCKING_TEST_METHOD();
     
     console.log(programmer instanceof (Programmer));
     console.log(programmer instanceof (Gentleman));
-    console.log(programmer instanceof (Men));
+    console.log(programmer instanceof (Man));
 
     console.log("");
 });

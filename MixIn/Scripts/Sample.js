@@ -11,17 +11,17 @@ var Mixin_BeverageLover =
 
 //
 
-function Men(name)
+function Man(name)
 {
     this.name = name;
 }
-Men.prototype =
+Man.prototype =
 {
-    constructor: Men,
+    constructor: Man,
      
     THOUGHTS: "I like soccer"
 }
-extend(Men, Mixin_Babbler);
+extend(Man, Mixin_Babbler);
 
 function Gentleman(name)
 {
@@ -55,12 +55,12 @@ extend(Programmer, Mixin_Babbler, Mixin_BeverageLover);
 
 
 
-var men = new Men("Bob");
+var man = new Man("Bob");
 var gentleman = new Gentleman("Bill");
 var programmer = new Programmer("Benjamin");
 
-men.say();
-men.argue();
+man.say();
+man.argue();
 
 gentleman.say();
 gentleman.drink();
