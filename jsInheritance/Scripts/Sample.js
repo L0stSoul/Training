@@ -137,6 +137,7 @@ $(document).ready(function ()
     gentleman.say();
     programmer.say();
     badprogrammer.say();
+
     
     console.log(programmer instanceof (Programmer));
     console.log(programmer instanceof (Gentleman));

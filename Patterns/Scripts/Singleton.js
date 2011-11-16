@@ -8,11 +8,21 @@ var singleton_A =
 var Singleton_B;
 (function(){
     var instance;
+    var anticlone_proxy;
     Singleton_B = function(){
         if( instance ){ return instance; }
 
-        instance = this;
-        this.log = function( text ){ console.log(text); }
+        instance = 
+        {
+            _counter: 0,
+            log: function( text ){ console.log( text + ++this._counter ); }
+        }
 
-        };
+        anticlone_proxy =
+        {
+            log: function( text ){ return instance.log( text ); }
+        }
+
+        return anticlone_proxy;
+    };
 })();
