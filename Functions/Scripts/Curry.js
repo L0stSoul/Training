@@ -8,7 +8,7 @@ function curry( fn ){
 
 	return function() {
 		var args = storedArgs.concat( slice.call( arguments ) );
-		return fn.apply( null, args );
+		return fn.apply( this, args );
 	}
 }
 
