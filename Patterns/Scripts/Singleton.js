@@ -9,6 +9,7 @@ var Singleton_B;
 (function(){
     var instance;
     var anticlone_proxy;
+
     Singleton_B = function(){
         if( instance ){ return instance; }
 
