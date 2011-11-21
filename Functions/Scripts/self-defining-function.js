@@ -1,6 +1,6 @@
 ﻿console.log("//self-defining-functions");
 
-function selfDefining()
+var selfDefining = function()
 {
 	console.log("some really heavy initialization occured");
 	console.log("f*ck yeah!");
